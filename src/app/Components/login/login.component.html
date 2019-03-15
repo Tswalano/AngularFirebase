@@ -1,0 +1,24 @@
+
+<form #myForm="ngForm" (ngSubmit)="register(myForm)" class="form-signin text-center mt-5 pt-5">
+
+  <img class="mb-4" src="https://www.gstatic.com/mobilesdk/160503_mobilesdk/logo/2x/firebase_96dp.png" alt=""
+       width="80" height="80">
+  <h1 class="h3 mb-3 font-weight-normal">Firebse Web Login</h1>
+
+  <small class="text-danger response"></small>
+
+  <div class="form-group">
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input type="inputEmail" name="inputEmail" id="inputEmail" class="form-control" placeholder="Email address" [(ngModel)]="user.username" required autofocus>
+  </div>
+
+  <div class="form-group">
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" [(ngModel)]="user.password" required>
+  </div>
+
+  <button class="btn btn-lg btn-primary btn-block" type="submit" id="btnLoginUser">Sign in <i
+    class="fas fa-spinner fa-spin"></i></button>
+
+  <p class="mt-5 mb-3 text-muted">&copy; Firebase Tutorial</p>
+</form>
